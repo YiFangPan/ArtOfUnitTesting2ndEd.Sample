@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace LogAn.UnitTests
@@ -17,19 +18,12 @@ namespace LogAn.UnitTests
             Assert.False(result);
         }
 
-        [Test]
-        public void InValidLogFileName_GoodExtensionLowercase_ReturnsTrue()
+        [TestCase("fileWithGoodExtension.slf")]
+        [TestCase("fileWithGoodExtension.SLF")]
+        public void InValidLogFileName_ValidExtensions_ReturnsTrue(String fileName)
         {
             LogAnalyzer analyzer = new LogAnalyzer();
-            bool result = analyzer.IsValidLogFileName("fileWithGoodExtension.slf");
-            Assert.True(result);
-        }
-        
-        [Test]
-        public void InValidLogFileName_GoodExtensionUppercase_ReturnsTrue()
-        {
-            LogAnalyzer analyzer = new LogAnalyzer();
-            bool result = analyzer.IsValidLogFileName("fileWithGoodExtension.SLF");
+            bool result = analyzer.IsValidLogFileName(fileName);
             Assert.True(result);
         }
     }
