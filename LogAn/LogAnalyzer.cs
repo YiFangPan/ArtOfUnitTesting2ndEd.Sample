@@ -6,7 +6,7 @@ namespace LogAn
     {
         public  bool isLastFileNameValid { get; set; }
         
-        public bool IsValidLogFileName(string fileName)
+        public bool isValidLogFileName(string fileName)
         {
             isLastFileNameValid = false;
             

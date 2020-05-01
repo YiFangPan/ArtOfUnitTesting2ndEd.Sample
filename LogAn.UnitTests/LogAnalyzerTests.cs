@@ -13,27 +13,27 @@ namespace LogAn.UnitTests
         [TestCase("fileWithGoodExtension.slf", true)]
         [TestCase("fileWithGoodExtension.SLF", true)]
         [TestCase("fileWithBadExtension.foo", false )]
-        public void IsValidLogFileName_VariousExtensions_ReturnsTrue(String fileName, bool expected)
+        public void isValidLogFileName_VariousExtensions_ReturnsTrue(String fileName, bool expected)
         {
             LogAnalyzer analyzer = getLogAnalyzer();
-            bool result = analyzer.IsValidLogFileName(fileName);
+            bool result = analyzer.isValidLogFileName(fileName);
             Assert.AreEqual(expected, result);
         }
 
         [Test]
-        public void IsValidLogFileName_EmptyFileName_ThrowException()
+        public void isValidLogFileName_EmptyFileName_ThrowException()
         {
             LogAnalyzer analyzer = getLogAnalyzer();
-            var ex = Assert.Catch<Exception>(() => analyzer.IsValidLogFileName(String.Empty));
+            var ex = Assert.Catch<Exception>(() => analyzer.isValidLogFileName(String.Empty));
             StringAssert.Contains("filename has to be provided", ex.Message);
         }
 
         [TestCase("badFile.foo", false)]
         [TestCase("goodFile.slf", true)]
-        public void IsValidLogFileName_WhenCalled_ChangesLastFileNameValid(String fileName, bool expected)
+        public void isValidLogFileName_WhenCalled_ChangesLastFileNameValid(String fileName, bool expected)
         {
             LogAnalyzer analyzer = getLogAnalyzer();
-            analyzer.IsValidLogFileName(fileName);
+            analyzer.isValidLogFileName(fileName);
             Assert.AreEqual(expected, analyzer.isLastFileNameValid);
         }
         
