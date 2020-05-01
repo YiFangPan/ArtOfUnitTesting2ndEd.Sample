@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace LogAn.UnitTests
 {
-    public class Tests
+    public class LogAnalyzerTests
     {
         [SetUp]
         public void Setup()
@@ -10,7 +10,7 @@ namespace LogAn.UnitTests
         }
 
         [Test]
-        public void Test1()
+        public void IsValidLogFileName_Bad_Extenstion_ReturnsFalse()
         {
             Assert.Pass();
         }

@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "LogAn/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/LogAn.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogAn.dll": {}
+        }
       }
     }
   },
@@ -4618,10 +4628,16 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "LogAn/1.0.0": {
+      "type": "project",
+      "path": "../LogAn/LogAn.csproj",
+      "msbuildProject": "../LogAn/LogAn.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "LogAn >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "NUnit3TestAdapter >= 3.15.1",
       "nunit >= 3.12.0"
@@ -4650,7 +4666,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/yifangpan/Desktop/RiderProjects/ArtOfUnitTesting2ndEd.Sample/LogAn/LogAn.csproj": {
+              "projectPath": "/Users/yifangpan/Desktop/RiderProjects/ArtOfUnitTesting2ndEd.Sample/LogAn/LogAn.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

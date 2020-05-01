@@ -14,7 +14,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/yifangpan/Desktop/RiderProjects/ArtOfUnitTesting2ndEd.Sample/LogAn/LogAn.csproj": {
+            "projectPath": "/Users/yifangpan/Desktop/RiderProjects/ArtOfUnitTesting2ndEd.Sample/LogAn/LogAn.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
